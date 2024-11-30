@@ -5,7 +5,7 @@
     --dark: 10, 5, 5;
     --light: 240, 240, 230;
 
-    --header-image: url(images/band3.jpg);
+    --header-image: url(images/band3.JPG);
 
     --gallery-image-1: url(images/albumCover1.jpeg);
     --gallery-image-2: url(images/albumCover2.jpeg);
@@ -13,25 +13,25 @@
     --gallery-image-4: url(images/albumCover4.jpeg);
     --gallery-image-5: url(images/albumCover5.jpeg);
     --gallery-image-6: url(images/albumCover6.jpeg);
-    --gallery-image-7: url(images/albumCover7.jpg);
-    --gallery-image-8: url(images/albumCover8.jpg);
+    --gallery-image-7: url(images/albumCover7.JPG);
+    --gallery-image-8: url(images/albumCover8.JPG);
 
-    --upcoming-image-1: url(images/dunkertons.jpg);
+    --upcoming-image-1: url(images/dunkertons.JPG);
 
-    --past-image-1: url(images/pheonixFestival.jpg);
+    --past-image-1: url(images/pheonixFestival.JPG);
     --past-image-2: url(images/band3.JPG);
-    --past-image-3: url(images/band4.jpg);
-    --past-image-4: url(images/band.jpg);
-    --past-image-5: url(images/band2.jpg);
+    --past-image-3: url(images/band4.JPG);
+    --past-image-4: url(images/band.JPG);
+    --past-image-5: url(images/band2.JPG);
 
-    --contact-image: url(images/tim3.jpg);
+    --contact-image: url(images/tim3.JPG);
     
-    --about-image-1: url(images/nigel.jpg);
+    --about-image-1: url(images/nigel.JPG);
     --about-image-2: url(images/nigel_torby.JPG);
-    --about-image-3: url(images/tim2.jpg);
-    --about-image-4: url(images/tim.jpg);
-    --about-image-5: url(images/band3.jpg);
-    --about-image-6: url(images/band2.jpg);
+    --about-image-3: url(images/tim2.JPG);
+    --about-image-4: url(images/tim.JPG);
+    --about-image-5: url(images/band3.JPG);
+    --about-image-6: url(images/band2.JPG);
 }
 
 * {
