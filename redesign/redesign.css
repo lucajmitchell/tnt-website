@@ -1,0 +1,86 @@
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+:root {
+    --dark: 10, 10, 20;
+    --light: 255, 245, 230;
+    --accent: 240, 30, 70;
+}
+
+
+.text-serif { font-family: "Cormorant Infant"; font-weight: 100; }
+.text-sans-serif { font-family: "Space Grotesk"; font-weight: 100; }
+.text-accent { font-family: "Syncopate"; font-weight: 100; }
+.text-logo { font-family: "Saira Stencil One"; font-weight: 100; }
+.text-small { font-size: 1rem; }
+.text-medium { font-size: 2rem; }
+.text-large { font-size: 5rem; }
+.text-huge { font-size: 10rem; }
+.text-dark { color: rgb(var(--dark)); }
+.text-light { color: rgb(var(--light)); }
+.text-italics { font-style: italic; }
+
+
+.restrict-width {
+    width: 70rem;
+    max-width: 95vw;
+    margin: 0 auto;
+}
+
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.1);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+.button-1 {
+    display: block;
+    width: fit-content;
+    background-color: rgb(var(--accent));
+    padding: 0.5rem 1rem;
+    box-sizing: border-box;
+    border-radius: 10rem;
+    text-decoration: none;
+    animation: pulse 1.5s infinite ease-in-out;
+}
+
+
+header {
+    background-image: linear-gradient(rgba(var(--dark), 0.7), rgba(var(--dark), 1)), url(images/band.jpeg);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    margin-bottom: 100vh;
+}
+
+header > div {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+}
+
+#header-content {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    position: sticky;
+    top: 0;
+}
+
+#header-images img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
