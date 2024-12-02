@@ -5,15 +5,17 @@
 }
 
 :root {
-    --dark: 10, 10, 20;
+    --dark: 10, 10, 15;
     --light: 255, 245, 230;
     --accent: 240, 30, 70;
 }
 
 
-.text-serif { font-family: "Cormorant Infant"; font-weight: 100; }
+/* General */
+
+
+.text-serif { font-family: "Cormorant Garamond"; }
 .text-sans-serif { font-family: "Space Grotesk"; font-weight: 100; }
-.text-accent { font-family: "Syncopate"; font-weight: 100; }
 .text-logo { font-family: "Saira Stencil One"; font-weight: 100; }
 .text-small { font-size: 1rem; }
 .text-medium { font-size: 2rem; }
@@ -21,7 +23,10 @@
 .text-huge { font-size: 10rem; }
 .text-dark { color: rgb(var(--dark)); }
 .text-light { color: rgb(var(--light)); }
+.text-accent { color: rgb(var(--accent)); }
 .text-italics { font-style: italic; }
+.text-bold { font-weight: 700; }
+.text-align-right { text-align: right; }
 
 
 .restrict-width {
@@ -37,13 +42,18 @@
     }
 
     50% {
-        transform: scale(1.1);
+        transform: scale(1.05);
     }
 
     100% {
         transform: scale(1);
     }
 }
+
+.pulse {
+    animation: pulse 1.5s infinite ease-in-out;
+}
+
 
 .button-1 {
     display: block;
@@ -53,8 +63,43 @@
     box-sizing: border-box;
     border-radius: 10rem;
     text-decoration: none;
-    animation: pulse 1.5s infinite ease-in-out;
 }
+
+.button-2 {
+    display: block;
+    width: fit-content;
+    border: 1px solid rgb(var(--light));
+    padding: 1rem 2rem;
+    box-sizing: border-box;
+    text-decoration: none;
+    position: relative;
+    transition: 0.5s;
+    z-index: 0;
+}
+
+.button-2::after {
+    content: "";
+    display: block;
+    height: 0.3rem;
+    width: 100%;
+    background-color: rgb(var(--light));
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    transition: 0.5s;
+    z-index: -1;
+}
+
+.button-2:hover::after {
+    height: 100%;
+}
+
+.button-2:hover {
+    color: rgb(var(--dark));
+}
+
+
+/* Header */
 
 
 header {
@@ -62,13 +107,11 @@ header {
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
-    margin-bottom: 100vh;
 }
 
 header > div {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 2rem;
 }
 
 #header-content {
@@ -79,8 +122,105 @@ header > div {
     top: 0;
 }
 
+#header-content p {
+    margin: 0 1rem 0 0;
+}
+
 #header-images img {
     display: block;
     width: 100%;
     height: auto;
+}
+
+
+/* Music */
+
+
+#music {
+    background-color: rgb(var(--accent));
+}
+
+#music > div {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+#music h1 {
+    grid-column: 1 / span 2;
+}
+
+.albums-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+}
+
+.albums-grid img {
+    display: block;
+    width: 100%;
+    aspect-ratio: 1;
+}
+
+#play-button-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#play-button {
+    width: 85%;
+    height: 85%;
+    background-color: rgb(var(--light));
+    border-radius: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+
+/* Events */
+
+
+#events {
+    background-image: linear-gradient(rgba(var(--dark), 0.7), rgba(var(--dark), 1)), url(images/band2.jpeg);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+
+#events > div {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.event-card {
+    display: grid;
+    grid-template-rows: 10rem auto;
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+}
+
+.event-info {
+    padding: 1rem 2rem;
+    box-sizing: border-box;
+    backdrop-filter: blur(10px);
+}
+
+#events-content {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    position: sticky;
+    top: 0;
+}
+
+#events-content p {
+    margin: 0 0 2rem 1rem
+}
+
+#events-content a {
+    margin-left: auto;
 }

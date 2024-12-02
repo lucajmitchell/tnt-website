@@ -4,13 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>TNT Band</title>
+    <title>TNT</title>
 
     <link rel="stylesheet" href="redesign.css">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Infant&family=Saira+Stencil+One&family=Space+Grotesk:wght@300..700&family=Syncopate:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond&family=Saira+Stencil+One&family=Space+Grotesk:wght@300..700&family=Syncopate:wght@400;700&display=swap" rel="stylesheet">
 
     <script src="https://kit.fontawesome.com/d6857f088c.js" crossorigin="anonymous"></script>
 
@@ -22,9 +22,9 @@
             <div>
                 <div id="header-content">
                     <div>
-                        <a href="" class="text-sans-serif text-small text-light button-1">NEW MERCH <i class="fa-solid fa-arrow-right"></i></a>
+                        <a href="" class="text-sans-serif text-small text-light button-1 pulse">NEW MERCH <i class="fa-solid fa-arrow-right"></i></a>
                         <h1 class="text-logo text-huge text-light">TNT</h1>
-                        <p class="text-sans-serif text-medium text-light"><span class="text-serif text-italics">Rock 'n' roll</span> band performing live since <span class="text-serif text-italics">2018</span>, ready for your next event!</p>
+                        <p class="text-sans-serif text-medium text-light">A <span class="text-serif text-italics text-accent">Rock 'n' roll</span> band performing live since <span class="text-serif text-italics text-accent">2019</span>, perfect for your next event!</p>
                     </div>
                 </div>
             </div>
@@ -35,6 +35,99 @@
             </div>
         </div>
     </header>
+
+    <section id="music">
+        <div class="restrict-width">
+            <h1 class="text-sans-serif text-huge text-light">The <span class="text-serif text-italics">Music</span></h1>
+            <div>
+                <div class="albums-grid">
+                    <img src="images/albumCover1.jpeg" alt="">
+                    <img src="images/albumCover2.jpeg" alt="">
+                    <img src="images/albumCover3.jpeg" alt="">
+                    <img src="images/albumCover4.jpeg" alt="">
+                </div>
+            </div>
+            <p class="text-sans-serif text-medium text-light text-align-right">Since 2019 we have been building up a varied, high energy set featuring classic hits from <span class="text-serif text-italics text-dark">Oasis</span>, <span class="text-serif text-italics text-dark">Buddy Holly</span>, <span class="text-serif text-italics text-dark">Elvis Presley</span> and <span class="text-serif text-italics text-dark">Chuck Berry</span>. As well as modern pieces from <span class="text-serif text-italics text-dark">Two Door Cinema Club</span>, <span class="text-serif text-italics text-dark">Mumford & Sons</span> and our own <span class="text-serif text-italics text-dark">originals</span>.</p>
+            <div id="play-button-container">
+                <div id="play-button" onclick="togglePlay()">
+                    <i id="play-icon" class="fa-solid fa-play text-huge text-dark"></i>
+                </div>
+            </div>
+            <audio id="audio-player" src="sound/sample.mp3"></audio>
+            <script>
+                function togglePlay() {
+                    const audio = document.getElementById("audio-player");
+                    const icon = document.getElementById("play-icon");
+                    if (audio.paused) {
+                        audio.play();
+                        icon.classList.remove("fa-play");
+                        icon.classList.add("fa-pause");
+                    } else {
+                        audio.pause();
+                        icon.classList.remove("fa-pause");
+                        icon.classList.add("fa-play");
+                    }
+                }
+            </script>
+            <div>
+                <div class="albums-grid">
+                    <img src="images/albumCover5.jpeg" alt="">
+                    <img src="images/albumCover6.jpeg" alt="">
+                    <img src="images/albumCover7.jpeg" alt="">
+                    <img src="images/albumCover8.jpeg" alt="">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="events">
+        <div class="restrict-width">
+            <div id="events-cards">
+                <div class="event-card" style="background-image: url(images/dunkertons.jpeg);">
+                    <div></div>
+                    <div class="event-info">
+                        <p class="text-sans-serif text-medium text-light text-italics">Rock The Orchard</p>
+                    </div>
+                </div>
+                <div class="event-card" style="background-image: url(images/pheonixFestival.jpeg);">
+                    <div></div>
+                    <div class="event-info">
+                        <p class="text-sans-serif text-medium text-light text-italics">Pheonix Festival</p>
+                    </div>
+                </div>
+                <div class="event-card" style="background-image: url(images/follyFest24.jpeg);">
+                    <div></div>
+                    <div class="event-info">
+                        <p class="text-sans-serif text-medium text-light text-italics">Folly Fest 2024</p>
+                    </div>
+                </div>
+                <div class="event-card" style="background-image: url(images/prestonFete.jpeg);">
+                    <div></div>
+                    <div class="event-info">
+                        <p class="text-sans-serif text-medium text-light text-italics">Preston Village Fete</p>
+                    </div>
+                </div>
+                <div class="event-card" style="background-image: url(images/follyFest23.jpeg);">
+                    <div></div>
+                    <div class="event-info">
+                        <p class="text-sans-serif text-medium text-light text-italics">Folly Fest 2023</p>
+                    </div>
+                </div>
+                <div class="event-card" style="background-image: url(images/deerPark.jpeg);">
+                    <div></div>
+                    <div class="event-info">
+                        <p class="text-sans-serif text-medium text-light text-italics">Deer Park Leaver's Ball</p>
+                    </div>
+                </div>
+            </div>
+            <div id="events-content">
+                <div>
+                    <p class="text-sans-serif text-medium text-light text-align-right">We've performed at a range of events, from <span class="text-serif text-italics text-accent">festivals</span> to <span class="text-serif text-italics text-accent">fundraisers</span>, and we have loved giving our all to every occasion.</p>
+                    <a href="" class="text-sans-serif text-small text-light button-2 pulse">BOOK US NOW</a>
+                </div>
+            </div>
+        </div>
+    </section>
 
 </body>
 </html>
