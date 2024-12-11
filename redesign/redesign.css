@@ -28,6 +28,7 @@
 .text-italics { font-style: italic; }
 .text-bold { font-weight: 700; }
 .text-align-right { text-align: right; }
+.text-centred { text-align: center; }
 
 
 .restrict-width {
